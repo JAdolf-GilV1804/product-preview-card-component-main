@@ -1,0 +1,147 @@
+:root {
+    /* Colors */
+    /* Primary */
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* fonts */
+    --heading: 'Fraunces', sans-serif;
+    --text: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cream);
+    font-size: 1.4rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 95%;
+    max-width: 140rem;
+}
+
+.grid {
+    width: 37.5rem;
+    margin: 0px auto;
+    display: grid;
+    background-color: var(--white);
+    border-radius: 2rem;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        width: 75rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.img-desktop {
+    display: none;
+}
+
+.img-mobile {
+    display: block;
+    max-width: 100%;
+    border-radius: 2rem 2rem 0 0;
+}
+
+@media (min-width: 768px) {
+    .img-desktop {
+        display: block;
+        width: 105%;
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+}
+
+.text {
+    padding: 3.5rem;
+}
+
+.text__perfume {
+    color: var(--darkGrayishBlue);
+    font-family: var(--text);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.text__heading {
+    color: var(--veryDarkBlue);
+    font-family: var(--heading);
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+    .text__heading {
+        font-size: 4.6rem;
+    }
+}
+
+.text__info {
+    color: var(--darkGrayishBlue);
+    font-family: var(--text);
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.price {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.price__green {
+    font-family: var(--heading);
+    font-size: 3rem;
+    color: var(--darkCyan);
+}
+
+.price__tach {
+    color: var(--darkGrayishBlue);
+    font-family: var(--text);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.button {
+    display: block;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--text);
+    color: var(--cream);
+    background-color: var(--darkCyan);
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--darkGrayishBlue);
+}
